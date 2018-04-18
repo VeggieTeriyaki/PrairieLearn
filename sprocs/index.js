@@ -3,9 +3,9 @@ var fs = require('fs');
 var path = require('path');
 var async = require('async');
 
-var error = require('../lib/error');
+var error = require('@prairielearn/prairielib/error');
 var logger = require('../lib/logger');
-var sqldb = require('../lib/sqldb');
+var sqldb = require('@prairielearn/prairielib/sql-db');
 
 module.exports = {
     init: function(callback) {
@@ -117,6 +117,7 @@ module.exports = {
             'variants_unlink.sql',
             'grader_loads_current.sql',
             'server_loads_current.sql',
+            'server_usage_current.sql',
             'assessment_questions_calculate_stats_for_assessment.sql',
             'assessment_questions_calculate_stats.sql',
             'instance_questions_calculate_stats.sql',
